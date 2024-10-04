@@ -19,7 +19,7 @@ messages = [
 
 # Invoke the model with messages
 result = model.invoke(messages)
-print(f"Answer from AI: {result.content}")
+print(f"Answer from AI: {result.content}") # rappel f-strings   
 
 
 # AIMessage:
