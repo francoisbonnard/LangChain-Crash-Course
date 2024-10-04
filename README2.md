@@ -1,6 +1,8 @@
 # Video
 
-(LangChain Master Class For Beginners 2024)[https://www.youtube.com/watch?v=yF9kGESAi3M]
+[LangChain Master Class For Beginners 2024](https://www.youtube.com/watch?v=yF9kGESAi3M)
+
+[Where am I ?](https://youtu.be/yF9kGESAi3M?si=7YUPv2unz6PDkzYW&t=1251)
 
 #  Install Poetry
 
@@ -28,8 +30,16 @@ start poetry
 
     poetry shell        
 
+Retirer les liens bleus zigzag
+
 ctrl + shift + P : select interpreter path
 
 choose : enter interpreter path 
 
 enter path displayed after `start poetry` command
+
+Voir les packages
+
+    poetry show
+
+[More about Poetry](https://www.youtube.com/watch?v=Ji2XDxmXSOM)
