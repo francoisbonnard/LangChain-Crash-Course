@@ -43,3 +43,20 @@ Voir les packages
     poetry show
 
 [More about Poetry](https://www.youtube.com/watch?v=Ji2XDxmXSOM)
+
+# Explore different models
+
+[Chat Model Documents](https://python.langchain.com/v0.2/docs/integrations/chat/)
+
+# Firebase 
+
+## AWS Amplify
+L'équivalent de Firebase chez Amazon est AWS Amplify. AWS Amplify est une plateforme de développement d'applications proposée par Amazon Web Services (AWS) qui offre une gamme complète d'outils pour créer, déployer et gérer des applications web et mobiles. Comme Firebase, AWS Amplify simplifie le développement backend avec des services comme l'authentification, les API (REST et GraphQL), les bases de données (via AWS DynamoDB), le stockage de fichiers, et les notifications push. Amplify est entièrement intégré avec l'écosystème AWS, offrant aux développeurs la flexibilité et la puissance de la plateforme cloud d'AWS tout en permettant une scalabilité et une sécurité robustes pour leurs applications.
+
+## Firestore
+Firestore, ou Cloud Firestore, est une base de données NoSQL en temps réel proposée par Firebase. Elle est conçue pour stocker et synchroniser des données entre les applications web et mobiles à l'échelle mondiale. Les données dans Firestore sont organisées en collections et documents, où chaque document contient des paires clé-valeur et peut être structuré avec des types de données imbriqués.
+
+
+
+
+
