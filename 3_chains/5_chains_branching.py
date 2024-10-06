@@ -15,7 +15,7 @@ positive_feedback_template = ChatPromptTemplate.from_messages(
     [
         ("system", "You are a helpful assistant."),
         ("human",
-         "Generate a thank you note for this positive feedback: {feedback}."),
+         "Generate a funny smiley with ascii art for this positive feedback: {feedback}."),
     ]
 )
 
@@ -23,7 +23,7 @@ negative_feedback_template = ChatPromptTemplate.from_messages(
     [
         ("system", "You are a helpful assistant."),
         ("human",
-         "Generate a response addressing this negative feedback: {feedback}."),
+         "Generate a line asciit art addressing this negative feedback: {feedback}."),
     ]
 )
 
@@ -80,12 +80,12 @@ classification_chain = classification_template | model | StrOutputParser()
 chain = classification_chain | branches
 
 # Run the chain with an example review
-# Good review - "The product is excellent. I really enjoyed using it and found it very helpful."
+# Good 
+review =  "The product is excellent. I really enjoyed using it and found it very helpful."
 # Bad review - "The product is terrible. It broke after just one use and the quality is very poor."
 # Neutral review - "The product is okay. It works as expected but nothing exceptional."
 # Default - "I'm not sure about the product yet. Can you tell me more about its features and benefits?"
-
-review = "The product is terrible. It broke after just one use and the quality is very poor."
+# Bad review = "The product is terrible. It broke after just one use and the quality is very poor."
 result = chain.invoke({"feedback": review})
 
 # Output the result

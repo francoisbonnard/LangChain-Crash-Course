@@ -20,7 +20,8 @@ prompt_template = ChatPromptTemplate.from_messages(
 
 # Define additional processing steps using RunnableLambda
 uppercase_output = RunnableLambda(lambda x: x.upper())
-count_words = RunnableLambda(lambda x: f"Word count: {len(x.split())}\n{x}")
+# count_words = RunnableLambda(lambda x: f"Word count: {len(x.split())}\n{x}")
+count_words = RunnableLambda(lambda x: f"{x}\n Word count: {len(x.split())}")
 
 # Create the combined chain using LangChain Expression Language (LCEL)
 chain = prompt_template | model | StrOutputParser() | uppercase_output | count_words

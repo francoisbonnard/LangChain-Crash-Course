@@ -19,10 +19,10 @@ prompt_template = ChatPromptTemplate.from_messages(
 
 # Create the combined chain using LangChain Expression Language (LCEL)
 chain = prompt_template | model | StrOutputParser()
-# chain = prompt_template | model
+result = chain.invoke({"topic": "lawyers", "joke_count": 2})
 
-# Run the chain
-result = chain.invoke({"topic": "lawyers", "joke_count": 3})
+# ce code remplace : 
+# prompt = prompt_template.invoke({"topic": "lawyers", "joke_count": 3})
+# result = model.invoke(prompt)
 
-# Output
 print(result)
