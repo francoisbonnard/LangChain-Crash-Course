@@ -12,6 +12,14 @@ Copy Installation Path: Once the installation is complete, it will provide you w
 
     C:\Users\franc\AppData\Roaming\Python\Scripts
 
+ou avec Powershell :
+    
+    $env:Path
+    $env:Path += ";C:\Users\franc\AppData\Roaming\Python\Scripts"
+    [Environment]::SetEnvironmentVariable("Path", $env:Path + ";C:\Users\franc\AppData\Roaming\Python\Scripts", [EnvironmentVariableTarget]::User)
+    [Environment]::SetEnvironmentVariable("Path", $env:Path + ";C:\Users\103677\AppData\Roaming\Python\Scripts\", [EnvironmentVariableTarget]::User)
+
+
 
 test poetry
 
@@ -32,15 +40,19 @@ start poetry
 
 Retirer les liens bleus zigzag
 
+    Spawning shell within C:\Users\103677\AppData\Local\pypoetry\Cache\virtualenvs\langchain-crash-course-AemLJ--Y-py3.11
+
 ctrl + shift + P : select interpreter path
 
 choose : enter interpreter path 
 
-enter path displayed after `start poetry` command
+enter path displayed after `start poetry` command (see above sentence starting with : "Spawning")
 
 Voir les packages
 
     poetry show
+    poetry add dotenv
+
 
 [More about Poetry](https://www.youtube.com/watch?v=Ji2XDxmXSOM)
 
