@@ -38,9 +38,9 @@ start poetry
 
     poetry shell        
 
-Retirer les liens bleus zigzag
-
     Spawning shell within C:\Users\103677\AppData\Local\pypoetry\Cache\virtualenvs\langchain-crash-course-AemLJ--Y-py3.11
+
+## Retirer les liens bleus zigzag
 
 ctrl + shift + P : select interpreter path
 
@@ -48,10 +48,9 @@ choose : enter interpreter path
 
 enter path displayed after `start poetry` command (see above sentence starting with : "Spawning")
 
-Voir les packages
+## Voir les packages
 
     poetry show
-    poetry add dotenv
 
 
 [More about Poetry](https://www.youtube.com/watch?v=Ji2XDxmXSOM)
