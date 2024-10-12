@@ -22,3 +22,7 @@ No relevant docs were retrieved using the relevance score threshold 0.9
 ## Metadata
 
 [j'en suis là](https://youtu.be/yF9kGESAi3M?si=gIDj-OA9BpixWRWw&t=6069)
+
+#LangChainDeprecationWarning: Since Chroma 0.4.x the manual persistence method is no longer supported as docs are automatically persisted.
+
+    poetry add langchain-chroma

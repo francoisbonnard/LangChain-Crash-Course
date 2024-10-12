@@ -1,6 +1,7 @@
 import os
 
-from langchain_community.vectorstores import Chroma
+# from langchain_community.vectorstores import Chroma
+from langchain_chroma import Chroma
 from langchain_openai import OpenAIEmbeddings
 
 # Define the persistent directory
@@ -16,8 +17,8 @@ db = Chroma(persist_directory=persistent_directory,
             embedding_function=embeddings)
 
 # Define the user's question
-# query = "How did Juliet die?"
-query = "Who is MMM ?"
+query = "How did Juliet die?"
+# query = "Who is MMM ?"
 
 # Retrieve relevant documents based on the query
 retriever = db.as_retriever(
