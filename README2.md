@@ -2,23 +2,15 @@
 
 [LangChain Master Class For Beginners 2024](https://www.youtube.com/watch?v=yF9kGESAi3M)
 
-[Where am I ?](https://youtu.be/yF9kGESAi3M?si=7YUPv2unz6PDkzYW&t=1251)
+[Where am I ?](https://youtu.be/yF9kGESAi3M?si=7YUPv2unz6PDkzYW&t=4580)
 
-#  Install Poetry
+#  Install Poetry b 
 
     (Invoke-WebRequest -Uri https://install.python-poetry.org -UseBasicParsing).Content | py -
 
 Copy Installation Path: Once the installation is complete, it will provide you with a path. Copy this path as you'll need to add it to your user environment variables.
 
     C:\Users\franc\AppData\Roaming\Python\Scripts
-
-ou avec Powershell :
-    
-    $env:Path
-    $env:Path += ";C:\Users\franc\AppData\Roaming\Python\Scripts"
-    [Environment]::SetEnvironmentVariable("Path", $env:Path + ";C:\Users\franc\AppData\Roaming\Python\Scripts", [EnvironmentVariableTarget]::User)
-    [Environment]::SetEnvironmentVariable("Path", $env:Path + ";C:\Users\103677\AppData\Roaming\Python\Scripts\", [EnvironmentVariableTarget]::User)
-
 
 
 test poetry
@@ -38,20 +30,17 @@ start poetry
 
     poetry shell        
 
-    Spawning shell within C:\Users\103677\AppData\Local\pypoetry\Cache\virtualenvs\langchain-crash-course-AemLJ--Y-py3.11
-
-## Retirer les liens bleus zigzag
+Retirer les liens bleus zigzag
 
 ctrl + shift + P : select interpreter path
 
 choose : enter interpreter path 
 
-enter path displayed after `start poetry` command (see above sentence starting with : "Spawning")
+enter path displayed after `start poetry` command
 
-## Voir les packages
+Voir les packages
 
     poetry show
-
 
 [More about Poetry](https://www.youtube.com/watch?v=Ji2XDxmXSOM)
 
