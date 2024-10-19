@@ -3,9 +3,15 @@ import os
 from langchain_community.vectorstores import Chroma
 from langchain_openai import OpenAIEmbeddings
 
+from dotenv import load_dotenv
+# Load environment variables from .env
+load_dotenv()
+
+
 # Define the persistent directory
 current_dir = os.path.dirname(os.path.abspath(__file__))
-persistent_directory = os.path.join(current_dir, "db", "chroma_db")
+# persistent_directory = os.path.join(current_dir, "db", "chroma_db")
+persistent_directory = os.path.join(current_dir, "db", "chroma_db_mmm")
 
 # Define the embedding model
 embeddings = OpenAIEmbeddings(model="text-embedding-3-small")
@@ -15,12 +21,13 @@ db = Chroma(persist_directory=persistent_directory,
             embedding_function=embeddings)
 
 # Define the user's question
-query = "Who is Odysseus' wife?"
+# query = "Who is Odysseus' wife?"
+query = "Quelle est la méthodologie de projet préférée de Ludo ?"
 
 # Retrieve relevant documents based on the query
 retriever = db.as_retriever(
     search_type="similarity_score_threshold",
-    search_kwargs={"k": 3, "score_threshold": 0.9},
+    search_kwargs={"k": 3, "score_threshold": 0.5},
 )
 relevant_docs = retriever.invoke(query)
 
