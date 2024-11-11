@@ -11,11 +11,12 @@ load_dotenv()
 
 # Define the directory containing the text file and the persistent directory
 current_dir = os.path.dirname(os.path.abspath(__file__))
-file_path = os.path.join(current_dir, "books", "ulysses.txt")
+file_path = os.path.join(current_dir, "books", "scarlet_letter.txt")
 persistent_directory = os.path.join(current_dir, "db", "chroma_db_Ulysse_is_back")
 
 # Check if the Chroma vector store already exists
-if not os.path.exists(persistent_directory):
+# if not os.path.exists(persistent_directory):
+if True:
     print("Persistent directory does not exist. Initializing vector store...")
 
     # Ensure the text file exists
@@ -57,7 +58,7 @@ if not os.path.exists(persistent_directory):
     # Create the vector store and persist it automatically
     print("\n--- Creating vector store ---")
     db = Chroma.from_documents(
-        docs, embeddings, persist_directory=persistent_directory,collection_name="CollectionUlysse")
+        docs, embeddings, persist_directory=persistent_directory,collection_name="CollectionScarlet")
     print("\n--- Finished creating vector store ---")
 else:
     print("Vector store already exists. No need to initialize.")
