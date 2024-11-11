@@ -22,12 +22,12 @@ db = Chroma(persist_directory=persistent_directory,
 
 # Define the user's question
 # query = "Who is Odysseus' wife?"
-query = "Quelle est la méthodologie de projet préférée de Ludo ?"
+query = "Who is James Joyce ?"
 
 # Retrieve relevant documents based on the query
 retriever = db.as_retriever(
     search_type="similarity_score_threshold",
-    search_kwargs={"k": 3, "score_threshold": 0.5},
+    search_kwargs={"k": 1, "score_threshold": 0.1},
 )
 relevant_docs = retriever.invoke(query)
 

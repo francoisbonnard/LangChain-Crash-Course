@@ -12,11 +12,11 @@ load_dotenv()
 # Define the persistent directory
 current_dir = os.path.dirname(os.path.abspath(__file__))
 db_dir = os.path.join(current_dir, "db")
-persistent_directory = os.path.join(db_dir, "chroma_db_apple")
+persistent_directory = os.path.join(db_dir, "chroma_db_asmodee")
 
 # Step 1: Scrape the content from apple.com using WebBaseLoader
 # WebBaseLoader loads web pages and extracts their content
-urls = ["https://www.apple.com/"]
+urls = ["https://www.asmodee.fr/"]
 
 # Create a loader for web content
 loader = WebBaseLoader(urls)
@@ -54,7 +54,7 @@ retriever = db.as_retriever(
 )
 
 # Define the user's question
-query = "What new products are announced on Apple.com?"
+query = "Quels sont les grands classiques sur asmodee.fr ?"
 
 # Retrieve relevant documents based on the query
 relevant_docs = retriever.invoke(query)

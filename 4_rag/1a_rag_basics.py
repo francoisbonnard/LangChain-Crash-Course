@@ -11,8 +11,8 @@ load_dotenv()
 
 # Define the directory containing the text file and the persistent directory
 current_dir = os.path.dirname(os.path.abspath(__file__))
-file_path = os.path.join(current_dir, "books", "mmm.txt")
-persistent_directory = os.path.join(current_dir, "db", "chroma_db_mmm")
+file_path = os.path.join(current_dir, "books", "ulysses.txt")
+persistent_directory = os.path.join(current_dir, "db", "chroma_db_Ulysse_is_back")
 
 # Check if the Chroma vector store already exists
 if not os.path.exists(persistent_directory):
@@ -44,11 +44,20 @@ if not os.path.exists(persistent_directory):
     )  # Update to a valid embedding model if needed
     print("\n--- Finished creating embeddings ---")
 
+    embedding_vectors = embeddings.embed_documents([doc.page_content for doc in docs])
+
+    # Afficher la dimension d'un embedding
+    if embedding_vectors:
+        print(f"Dimension d'un embedding : {len(embedding_vectors[0])}")
+        # Dimension d'un embedding : 1536
+    else:
+        print("Aucun embedding généré.")
+
+
     # Create the vector store and persist it automatically
     print("\n--- Creating vector store ---")
     db = Chroma.from_documents(
-        docs, embeddings, persist_directory=persistent_directory)
+        docs, embeddings, persist_directory=persistent_directory,collection_name="CollectionUlysse")
     print("\n--- Finished creating vector store ---")
-
 else:
     print("Vector store already exists. No need to initialize.")
